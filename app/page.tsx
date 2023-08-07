@@ -7,10 +7,11 @@ import ListingCard from './components/listings/ListingCard'
 import { ListingsParams } from './actions/getListings'
 
 interface HomeProps{
-  searchParamas:ListingsParams
+  searchParamas:ListingsParams 
 }
 
 const Home=async({searchParamas}:HomeProps)=> {
+  console.log('searchParamas:', searchParamas);
   const listings = await getListings(searchParamas)
   const currentUser = await getCurrentUser()
 
