@@ -31,7 +31,6 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <ClientOnly>
 
         <ToasterProvider/>
         <SearchModal/>
@@ -39,7 +38,7 @@ export default async function RootLayout({
         <LoginModal/>
         <RegisterModal/>
         <Navbar currentUser={currentUser}/>
-        </ClientOnly>
+       
         <div className='pb-20 pt-28'>
         {children}
         </div>

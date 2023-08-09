@@ -1,5 +1,5 @@
 
-
+export const dynamic = 'force-dynamic'
 import getListings from './actions/getListings'
 import getCurrentUser from './actions/getCurrentUser'
 import EmptyState from './components/EmptyState'
@@ -25,7 +25,6 @@ const Home=async({searchParams}:HomeProps)=> {
     )
   }
   return (
-    <ClientOnly>
 
    <Container>
     <div
@@ -40,7 +39,7 @@ const Home=async({searchParams}:HomeProps)=> {
         ))}
     </div>
    </Container>
-        </ClientOnly>
+        
   )
 }
 export default Home;
