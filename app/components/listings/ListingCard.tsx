@@ -27,6 +27,7 @@ const ListingCard: FC<ListingCardProps> = ({
     actionId='',
     currentUser
 }) => {
+ 
     const router = useRouter();
     const {getByValue} = useCountries()
     const location = getByValue(data.locationValue)
