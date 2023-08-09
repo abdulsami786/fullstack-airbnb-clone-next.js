@@ -6,7 +6,7 @@ import CountrySelect, { CountrySelectValue } from "../inputs/CountrySelect";
 import { Range } from "react-date-range";
 import dynamic from "next/dynamic";
 import qs from 'query-string';
-import { format } from "path";
+
 import { formatISO } from "date-fns";
 import Heading from "../Heading";
 import Calender from "../inputs/Calender";

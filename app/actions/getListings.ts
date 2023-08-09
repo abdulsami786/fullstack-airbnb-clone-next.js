@@ -1,5 +1,6 @@
 import prisma from "@/app/libs/prismadb";
 
+
 export interface ListingsParams {
   userId?: string;
   guestCount?: number;
@@ -13,7 +14,8 @@ export interface ListingsParams {
 
 export default async function getListings(params: ListingsParams) {
   try {
-    const {userId,roomCount,guestCount,bathroomCount,locationValue,startDate,endDate,category} = params;
+   
+    const {userId,roomCount,guestCount,bathroomCount,locationValue,startDate,endDate,category} = params || {};
 
     let query: any = {};
 
@@ -65,7 +67,8 @@ export default async function getListings(params: ListingsParams) {
         }
       }
     }
-
+    console.log(query,"query");
+    
     const listings = await prisma.listing.findMany({
       where: query,
       orderBy: {
